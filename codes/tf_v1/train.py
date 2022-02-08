@@ -23,7 +23,7 @@ def main():
     # save the config in a txt file
     save_config(config)
     # create tensorflow session
-    sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
+    sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
     # create your data generator
     data = DataGenerator(config)
     # create a CNN model

@@ -1,6 +1,6 @@
 {
     "exp_name": "NAB",
-    "dataset": "ambient_temp",
+    "dataset": "single_station_1122",
     "y_scale": 5,
     "one_image": 0,
     "l_seq": 12,
@@ -17,7 +17,7 @@
     "num_epochs_lstm": 20,
     "learning_rate_vae": 0.0004,
     "learning_rate_lstm": 0.0002,
-    "code_size": 6,
+    "code_size": 12,
     "sigma": 0.1,
     "sigma2_offset": 0.01,
     "num_hidden_units": 512,

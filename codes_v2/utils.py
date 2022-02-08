@@ -78,17 +78,21 @@ def create_dirs(dirs):
 
 
 def count_trainable_variables(scope_name):
-  total_parameters = 0
-  for variable in tf.compat.v1.trainable_variables(scope_name):
-    # shape is an array of tf.Dimension
-    shape = variable.get_shape()
-    variable_parameters = 1
-    for dim in shape:
-      variable_parameters *= dim.value
-    total_parameters += variable_parameters
-  print(
-    'The total number of trainable parameters in the {} model is: {}'.format(scope_name, total_parameters))
-  return total_parameters
+    total_parameters = 0
+    for variable in tf.compat.v1.trainable_variables(scope_name):
+        # shape is an array of tf.Dimension
+        shape = variable.get_shape()
+        variable_parameters = 1
+        for dim in shape:
+            if type(dim) is int:
+                variable_parameters *= dim
+            else:
+                variable_parameters *= dim.value
+        total_parameters += variable_parameters
+        print(
+            'The total number of trainable parameters i' +\
+            'n the {} model is: {}'.format(scope_name, total_parameters))
+    return total_parameters
 
 
 def get_args():

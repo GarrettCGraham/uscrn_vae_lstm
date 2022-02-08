@@ -1,0 +1,281 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 17 files
+Detected 6 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: codes/trainers.py
+--------------------------------------------------------------------------------
+codes/trainers.py:44:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: codes/base.py
+--------------------------------------------------------------------------------
+codes/base.py:37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: codes/tf_v1/models.py
+--------------------------------------------------------------------------------
+codes/tf_v1/models.py:31:20: WARNING: Changing dataset.make_initializable_iterator() to tf.compat.v1.data.make_initializable_iterator(dataset). Please check this transformation.
+
+--------------------------------------------------------------------------------
+File: codes/tf_v1/trainers.py
+--------------------------------------------------------------------------------
+codes/tf_v1/trainers.py:44:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: codes/tf_v1/base.py
+--------------------------------------------------------------------------------
+codes/tf_v1/base.py:37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: codes/.ipynb_checkpoints/base-checkpoint.py
+--------------------------------------------------------------------------------
+codes/.ipynb_checkpoints/base-checkpoint.py:37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'codes/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'codes/models.py'
+ outputting to 'codes_v2/models.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/data_loader.py'
+ outputting to 'codes_v2/data_loader.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/utils.py'
+ outputting to 'codes_v2/utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/trainers.py'
+ outputting to 'codes_v2/trainers.py'
+--------------------------------------------------------------------------------
+
+44:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/train.py'
+ outputting to 'codes_v2/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/base.py'
+ outputting to 'codes_v2/base.py'
+--------------------------------------------------------------------------------
+
+37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/models.py'
+ outputting to 'codes_v2/tf_v1/models.py'
+--------------------------------------------------------------------------------
+
+25:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+26:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+31:20: WARNING: Changing dataset.make_initializable_iterator() to tf.compat.v1.data.make_initializable_iterator(dataset). Please check this transformation.
+
+33:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+34:25: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+38:11: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+39:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+42:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+42:41: INFO: Added keywords to args of function 'tf.pad'
+50:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+58:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+66:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+75:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+83:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+91:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+99:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+108:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+116:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+124:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+132:17: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+141:23: INFO: Renamed 'tf.layers.flatten' to 'tf.compat.v1.layers.flatten'
+142:23: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+146:23: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+151:26: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+162:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+163:16: INFO: Added keywords to args of function 'tf.cond'
+164:18: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+170:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+177:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+188:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+199:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+210:18: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+220:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+227:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+238:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+249:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+260:18: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+270:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+278:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+289:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+300:20: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+311:18: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+324:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/data_loader.py'
+ outputting to 'codes_v2/tf_v1/data_loader.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/utils.py'
+ outputting to 'codes_v2/tf_v1/utils.py'
+--------------------------------------------------------------------------------
+
+82:18: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/trainers.py'
+ outputting to 'codes_v2/tf_v1/trainers.py'
+--------------------------------------------------------------------------------
+
+44:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/train.py'
+ outputting to 'codes_v2/tf_v1/train.py'
+--------------------------------------------------------------------------------
+
+26:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+26:29: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/tf_v1/base.py'
+ outputting to 'codes_v2/tf_v1/base.py'
+--------------------------------------------------------------------------------
+
+37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+55:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+57:40: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+62:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+64:42: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+68:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+68:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+70:23: INFO: Added keywords to args of function 'tf.reduce_sum'
+71:25: INFO: Added keywords to args of function 'tf.reduce_sum'
+72:25: INFO: Added keywords to args of function 'tf.reduce_sum'
+72:39: INFO: Renamed 'tf.log' to 'tf.math.log'
+74:21: INFO: Added keywords to args of function 'tf.reduce_mean'
+77:26: INFO: Added keywords to args of function 'tf.reduce_mean'
+79:46: INFO: Added keywords to args of function 'tf.reduce_sum'
+81:46: INFO: Added keywords to args of function 'tf.reduce_mean'
+85:32: INFO: Added keywords to args of function 'tf.reduce_sum'
+87:37: INFO: Added keywords to args of function 'tf.reduce_mean'
+90:61: INFO: Renamed 'tf.log' to 'tf.math.log'
+97:19: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+97:37: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+98:19: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+98:37: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+99:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+99:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+109:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+110:10: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+111:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+111:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+126:17: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+135:25: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+136:25: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/.ipynb_checkpoints/data_loader-checkpoint.py'
+ outputting to 'codes_v2/.ipynb_checkpoints/data_loader-checkpoint.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/.ipynb_checkpoints/utils-checkpoint.py'
+ outputting to 'codes_v2/.ipynb_checkpoints/utils-checkpoint.py'
+--------------------------------------------------------------------------------
+
+82:18: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/.ipynb_checkpoints/models-checkpoint.py'
+ outputting to 'codes_v2/.ipynb_checkpoints/models-checkpoint.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/.ipynb_checkpoints/base-checkpoint.py'
+ outputting to 'codes_v2/.ipynb_checkpoints/base-checkpoint.py'
+--------------------------------------------------------------------------------
+
+37:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+55:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+57:40: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+62:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+64:42: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+68:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+68:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+70:23: INFO: Added keywords to args of function 'tf.reduce_sum'
+71:25: INFO: Added keywords to args of function 'tf.reduce_sum'
+72:25: INFO: Added keywords to args of function 'tf.reduce_sum'
+72:39: INFO: Renamed 'tf.log' to 'tf.math.log'
+74:21: INFO: Added keywords to args of function 'tf.reduce_mean'
+77:26: INFO: Added keywords to args of function 'tf.reduce_mean'
+79:46: INFO: Added keywords to args of function 'tf.reduce_sum'
+81:46: INFO: Added keywords to args of function 'tf.reduce_mean'
+85:32: INFO: Added keywords to args of function 'tf.reduce_sum'
+87:37: INFO: Added keywords to args of function 'tf.reduce_mean'
+90:61: INFO: Renamed 'tf.log' to 'tf.math.log'
+97:19: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+97:37: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+98:19: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+98:37: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+99:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+99:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+109:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+110:10: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+111:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+111:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+126:17: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+135:25: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+136:25: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'codes/.ipynb_checkpoints/train-checkpoint.py'
+ outputting to 'codes_v2/.ipynb_checkpoints/train-checkpoint.py'
+--------------------------------------------------------------------------------
+
+26:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+26:29: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
